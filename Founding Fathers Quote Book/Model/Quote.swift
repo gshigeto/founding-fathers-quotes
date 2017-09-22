@@ -38,7 +38,7 @@ class Quote {
                     .quote { font-size: 24pt; font-style: italic; }
                     .speaker { text-align: right; font-size: 18pt; padding-top: 1.5em; }
                     .speaker::before { content: "- "; }
-                    .container { position: absolute; left: 0; top: 0; transition: opacity 1s ease-in-out; }
+                    .container { position: absolute; left: 0; top: 0; padding: 2em; transition: opacity 1s ease-in-out; }
                     #quote1 { opacity: 1; }
                     #quote2 { opacity: 0; }
                 </style>
@@ -55,18 +55,18 @@ class Quote {
                         }
 
                         t2.getElementsByClassName('quote')[0].innerHTML = quote;
-                        t2.getElementsByClassName('quote')[1].innerHTML = speaker;
+                        t2.getElementsByClassName('speaker')[0].innerHTML = speaker;
                         t1.style.opacity = 0;
                         t2.style.opacity = 1;
                     }
                 </script>
             </head>
             <body>
-                <div id="quote1">
+                <div id="quote1" class="container">
                     <div class="quote">\(text)</div>
                     <div class="speaker">\(speaker)</div>
                 </div>
-                <div id="quote2">
+                <div id="quote2" class="container">
                     <div class="quote"></div>
                     <div class="speaker"></div>
                 </div>
