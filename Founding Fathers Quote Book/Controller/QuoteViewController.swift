@@ -92,7 +92,7 @@ class QuoteViewController: UIViewController {
             toggleButton.title = Storyboard.TopicsTitle
             title = Storyboard.QuoteOfTheDayTitle
         }
-        webView.loadHTMLString(currentQuote.htmlPage(), baseURL: nil)
+        webView.loadHTMLString(currentQuote.html, baseURL: nil)
     }
     
     private func updateUIByToggling() {
